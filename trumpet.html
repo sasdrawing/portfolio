@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            All Art
+        </title>
+        <link rel="stylesheet" href="image-style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>SAS Drawings</h1>
+            <img src="Images/logo.png">
+            <nav>
+                <ul>
+                    <a href="home.html"><li>Home</li></a>
+                    <a href="index.html"><li id="current">All Projects</li></a>
+                    <a href="current_project.html"><li>Current Project</li></a>
+                    <a href="about.html"><li>About</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2><a href="index.html">&ltBack </a><hr width="60%" align="left"></h2>
+
+            <table>
+                <tr>
+                    <th>Image Version</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_light_sketch.jpg";document.getElementById("title").innerHTML="Trumpet - Light Outline"; index = 0;'>Light Outline</td>
+                    <td>1 hr 05 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_precision.jpg";document.getElementById("title").innerHTML="Trumpet - Precision Line Drawing"; index = 1;'>Precision Line Drawing</td>
+                    <td>2 hr 10 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_secondary_1.jpg";document.getElementById("title").innerHTML="Trumpet - Preliminary Shading"; index = 2;'>Preliminary Shading</td>
+                    <td>3 hr 25 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_secondary_2.jpg";document.getElementById("title").innerHTML="Trumpet - Secondary Shading #1"; index = 3;'>Secondary Shading #1</td>
+                    <td>4 hr 10 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_secondary_3.jpg";document.getElementById("title").innerHTML="Trumpet - Secondary Shading #2"; index = 4;'>Secondary Shading #2</td>
+                    <td>5 hr 25 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_tertiary_1.jpg";document.getElementById("title").innerHTML="Trumpet - Tertiary Shading #1"; index = 5;'>Tertiary Shading #1</td>
+                    <td>6 hr 10 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_tertiary_2.jpg";document.getElementById("title").innerHTML="Trumpet - Tertiary Shading #2"; index = 6;'>Tertiary Shading #2</td>
+                    <td>7 hr 15 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="trumpet_drawings/trumpet_tertiary_3.jpg";document.getElementById("title").innerHTML="Tire Swing - Tertiary Shading #3"; index = 7;'>Tertiary Shading #3</td>
+                    <td>8 hr 25 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="Drawings/Trumpet.jpg";document.getElementById("title").innerHTML="Trumpet - Final Drawing"; index = 8;'>Final Drawing</td>
+                    <td>9 hr 15 min</td>
+                </tr>
+            </table>
+
+            <div id="image">
+                <img src="Drawings/Trumpet.jpg" id="pic">
+                <p id="left" onclick="previous()">&lt;-</p>
+                <h3 id="title">Trumpet - Final Drawing</h3>
+                <p id="right" onclick="forward()">-&gt;</p>
+                
+            </div>
+
+            <!-- Include circles with total time, size, date completed -->
+            <div class="specs">
+                <h4>Total Time</h4>
+                <p>9:15</p>
+            </div>
+            <div class="specs">
+                <h4>Size</h4>
+                <p>26.5 x 12.5 (cm)</p>
+            </div>
+            <div class="specs">
+                <h4>Date Completed</h4>
+                <p>08-05-2020</p>
+            </div>
+        </main>
+
+
+        <footer>
+            <h2>SAS Drawings</h2>
+        </footer>
+
+        <script>
+            var imgs = ["trumpet_drawings/trumpet_light_sketch.jpg", "trumpet_drawings/trumpet_precision.jpg", "trumpet_drawings/trumpet_secondary_1.jpg",
+                        "trumpet_drawings/trumpet_secondary_2.jpg", "trumpet_drawings/trumpet_secondary_3.jpg", "trumpet_drawings/trumpet_tertiary_1.jpg",
+                        "trumpet_drawings/trumpet_tertiary_2.jpg","trumpet_drawings/trumpet_tertiary_3.jpg", "Drawings/Trumpet.jpg"];
+            var text = ["Trumpet - Light Outline", "Trumpet - Precision Line Drawing", "Trumpet - Preliminary Shading",
+                        "Trumpet - Secondary Shading #1", "Trumpet - Secondary Shading #2", "Trumpet - Tertiary Shading #1",
+                        "Trumpet - Tertiary Shading #2", "Trumpet - Tertiary Shading #3", "Trumpet - Final Drawing"];
+            var index = imgs.length - 1;
+
+            function forward() {
+                index++;
+                document.getElementById("pic").src=imgs[index % imgs.length];
+                document.getElementById("title").innerHTML=text[index % text.length];
+            }
+
+            function previous(){
+                index--;
+                if (index < 0) {
+                    index+= imgs.length;
+                }
+                document.getElementById("pic").src=imgs[index % imgs.length];
+                document.getElementById("title").innerHTML=text[index % text.length];
+            }
+        </script>
+    </body>
+</html>

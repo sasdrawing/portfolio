@@ -1,0 +1,163 @@
+html {
+    background: gray;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 25px;
+}
+
+header{
+    background: #ab2016;
+    color: white;
+    height: 160px;
+    width: 1000px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+header h1 {
+    padding: 30px;
+    padding-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 38px;
+}
+
+header img {
+    display: inline-block;
+    width: 150px;
+    padding-left: 400px;
+}
+
+nav li {
+    list-style: none inside;
+    width: 227px;
+    padding: 17px 0px;
+    display: inline-block;
+    text-align: center;
+    background: #2d3030;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+#current {
+    border-top: 3px solid #1fb5b5;
+}
+
+nav li:hover {
+    background-color: #1fb5b5;
+    color: #2d3030;
+}
+
+aside {
+    width: 170px;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #1fb5b5;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+    position: sticky;
+    top: 10px;
+}
+
+main {
+    width: 750px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+#rhombus {
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 325px;
+}
+
+.info_block {
+    border: 2px solid #2d3030;
+    border-radius: 25px;
+    width: 750px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.info_block h2 {
+    margin-left: 20px;
+}
+
+.collapsible {
+    background-color: #ab2016;
+    color: white;
+    padding:20px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #2d3030;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#me {
+    display: inline-block;
+}
+
+#me_pic {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+    vertical-align: top;
+    border-radius: 25px;
+}
+
+#me p {
+    display: inline-block;
+}
+
+.collapsible:hover {
+    background-color: #1fb5b5;
+}
+
+.content {
+    padding-left: 10px;
+    border: 1px solid #2d3030;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: none;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mat_pic {
+    margin-left: 200px;
+    border-radius: 25px;
+}
+
+footer {
+    height: 60px;
+    background: #ab2016;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-family: 'Dancing Script', cursive;
+}
