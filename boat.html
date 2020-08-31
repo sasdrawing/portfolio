@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            All Art
+        </title>
+        <link rel="stylesheet" href="image-style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>SAS Drawings</h1>
+            <img src="Images/logo.png">
+            <nav>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="gallery.html"><li id="current">All Projects</li></a>
+                    <a href="current_project.html"><li>Current Project</li></a>
+                    <a href="about.html"><li>About</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2><a href="gallery.html">&ltBack </a><hr width="60%" align="left"></h2>
+
+            <table>
+                <tr>
+                    <th>Image Version</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="boat_drawings/boat_light_outline.jpg";document.getElementById("title").innerHTML="Boat - Light Outline"; index = 0;'>Light Outline</td>
+                    <td>1 hr 0 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="boat_drawings/boat_precision.jpg";document.getElementById("title").innerHTML="Boat - Precision Line Drawing"; index = 1;'>Precision Line Drawing</td>
+                    <td>2 hr 15 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="boat_drawings/boat_prelim_1.jpg";document.getElementById("title").innerHTML="Boat - Preliminary Shading #1"; index = 2;'>Preliminary Shading #1</td>
+                    <td>2 hr 55 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="boat_drawings/boat_prelim_2.jpg";document.getElementById("title").innerHTML="Boat - Preliminary Shading #2"; index = 3;'>Preliminary Shading #2</td>
+                    <td>3 hr 35 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="boat_drawings/boat_second.jpg";document.getElementById("title").innerHTML="Boat - Secondary Shading"; index = 4;'>Secondary Shading</td>
+                    <td>4 hr 40 min</td>
+                </tr>
+                <tr>
+                    <td onclick='document.getElementById("pic").src="Drawings/Boat.jpg";document.getElementById("title").innerHTML="Boat - Final Drawing"; index = 5;'>Final Drawing</td>
+                    <td>5 hr 40 min</td>
+                </tr>
+            </table>
+
+            <div id="image">
+                <img src="Drawings/Boat.jpg" id="pic">
+                <p id="left" onclick="previous()">&lt;-</p>
+                <h3 id="title">Boat - Final Drawing</h3>
+                <p id="right" onclick="forward()">-&gt;</p>
+            </div>
+
+            <!-- Include circles with total time, size, date completed -->
+            <div class="specs">
+                <h4>Total Time</h4>
+                <p>5:40</p>
+            </div>
+            <div class="specs">
+                <h4>Size</h4>
+                <p>23 x 13 (cm)</p>
+            </div>
+            <div class="specs">
+                <h4>Date Completed</h4>
+                <p>6-26-2020</p>
+            </div>
+        </main>
+
+
+        <footer>
+            <h2>SAS Drawings</h2>
+        </footer>
+
+        <script>
+            var imgs = ["boat_drawings/boat_light_outline.jpg", "boat_drawings/boat_precision.jpg", "boat_drawings/boat_prelim_1.jpg",
+                        "boat_drawings/boat_prelim_2.jpg", "boat_drawings/boat_second.jpg", "Drawings/Boat.jpg"];
+            var text = ["Boat - Light Outline", "Boat - Precision Line Drawing", "Boat - Preliminary Shading #1",
+                        "Boat - Preliminary Shading #2", "Boat - Secondary Shading", "Boat - Final Drawing"];
+            var index = imgs.length - 1;
+
+            function forward() {
+                index++;
+                document.getElementById("pic").src=imgs[index % imgs.length];
+                document.getElementById("title").innerHTML=text[index % text.length];
+            }
+
+            function previous(){
+                index--;
+                if (index < 0) {
+                    index+= imgs.length;
+                }
+                document.getElementById("pic").src=imgs[index % imgs.length];
+                document.getElementById("title").innerHTML=text[index % text.length];
+            }
+        </script>
+    </body>
+</html>
