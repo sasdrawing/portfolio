@@ -1,0 +1,111 @@
+html {
+    background: gray;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 25px;
+}
+
+header{
+    background: #ab2016;
+    color: white;
+    height: 160px;
+    width: 1000px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+header h1 {
+    padding: 30px;
+    padding-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 38px;
+}
+
+header img {
+    display: inline-block;
+    width: 150px;
+    padding-left: 400px;
+}
+
+nav li {
+    list-style: none inside;
+    width: 227px;
+    padding: 17px 0px;
+    display: inline-block;
+    text-align: center;
+    background: #2d3030;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+#current {
+    border-top: 3px solid #1fb5b5;
+}
+
+nav li:hover {
+    background-color: #1fb5b5;
+    color: #2d3030;
+}
+
+main {
+    display: inline-block;
+    padding: 10px;
+}
+
+main h2 {
+    padding-left: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.drawing {
+    display:inline-block;
+    border: 2px solid #2d3030;
+    padding: 8px;
+    border-radius: 25px;
+    width: 300px;
+    height: 315px;
+    margin-bottom: 15px;
+}
+
+.drawing:hover{
+    background-color: #2d3030;
+    border: 2px solid #1fb5b5;
+}
+
+.drawing img{
+    border-radius: 25px;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.drawing h4 {
+    background: #ab2016;
+    color: white;
+    padding-left: 15px;
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer {
+    height: 60px;
+    background: #ab2016;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-family: 'Dancing Script', cursive;
+}
